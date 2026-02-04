@@ -1,0 +1,13 @@
+	push 21
+	push 3
+	push 7
+	mul
+	add
+	sysc OUT_DEC
+	sysc OUT_LN
+	push 11
+	push 9
+	mul
+	sysc OUT_DEC
+	sysc OUT_LN
+	halt

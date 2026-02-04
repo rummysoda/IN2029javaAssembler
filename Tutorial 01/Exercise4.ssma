@@ -1,0 +1,16 @@
+// Java equivalent:
+//      x = x-1;
+//      System.out.println(x);
+
+    loadi $x
+    push 1
+    sub
+    storei $x
+    loadi $x
+    sysc OUT_DEC
+    sysc OUT_LN
+
+    halt
+.data
+$x:
+    10000

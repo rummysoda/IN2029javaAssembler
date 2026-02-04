@@ -1,0 +1,18 @@
+// Java equivalent:
+//  if (x == 7) {
+//      System.out.print("Lucky 7!\n");
+//  }
+//  else {
+//      System.out.print("Unlucky.\n");
+//  }
+
+    // your code goes here
+
+    halt
+.data
+$x:
+    7
+$msg1:
+    "Lucky 7!\n"
+$msg2:
+    "Unlucky\n"

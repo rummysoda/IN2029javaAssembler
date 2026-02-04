@@ -1,0 +1,24 @@
+// Java equivalent:
+//      x = 7;
+    push 7
+    storei $x
+
+// Java equivalent:
+//      System.out.println(x);
+    loadi $x
+    sysc OUT_DEC
+    sysc OUT_LN
+
+// Java equivalent:
+//      System.out.println(3 * x);
+    // a) your code goes here
+
+// Java equivalent:
+//      x = 11 * x;
+//      System.out.println(x);
+    // b) your code goes here
+
+    halt
+.data
+$x:
+    0

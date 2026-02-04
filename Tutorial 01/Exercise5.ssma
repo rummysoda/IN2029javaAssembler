@@ -1,0 +1,9 @@
+// Java equivalent:
+//  while (x != 0) { x = x-1; System.out.println(x); }
+
+    // your code goes here
+
+    halt
+.data
+$x:
+    10000

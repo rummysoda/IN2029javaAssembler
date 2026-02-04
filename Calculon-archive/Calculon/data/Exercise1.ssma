@@ -1,0 +1,10 @@
+// calculate (2 + 3) * 7
+    // your code goes here
+    push 2
+    push 3
+    add
+// print the result
+    sysc OUT_DEC
+    sysc OUT_LN
+
+    halt

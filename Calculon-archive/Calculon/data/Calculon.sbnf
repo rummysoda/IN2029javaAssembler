@@ -1,0 +1,26 @@
+tokens {
+    -- simple comments and whitespace
+    SKIP: "((//.*((\r?\n)|\z))|\s)+"
+    LBR: "\("
+    RBR: "\)"
+    SEMIC: ";"
+    BEGIN: "begin"
+    END: "end"
+    PRINTLN: "println"
+    -- the binary operators:
+    --  + *
+    BINARY_OP: "\+|\*"
+    INTLIT: "[0-9]+"
+}
+
+-- grammar rules
+
+Program -> BEGIN Stm* END
+
+Stm -> PRINTLN LBR Exp RBR SEMIC
+
+SimpleExp -> INTLIT
+SimpleExp -> LBR Exp RBR
+
+OperatorClause -> BINARY_OP SimpleExp
+OperatorClause ->

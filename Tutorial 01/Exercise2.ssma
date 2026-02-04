@@ -1,0 +1,7 @@
+// calculate 2 + (3 * 7)
+    // your code goes here
+
+// print the result
+    sysc OUT_DEC
+    sysc OUT_LN
+    halt

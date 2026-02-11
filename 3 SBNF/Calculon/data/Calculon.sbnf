@@ -1,0 +1,45 @@
+tokens {
+    -- simple comments and whitespace
+    SKIP: "((//.*((\r?\n)|\z))|\s)+"
+    LBR: "\("
+    RBR: "\)"
+    LCBR: "\{"
+    RCBR: "\}"
+    SEMIC: ";"
+    BEGIN: "begin"
+    END: "end"
+    PRINTLN: "println"
+    WHILE: "while"
+    IF: "if"
+    ELSE: "else"
+    INT_TYPE: "int"
+    ASSIGN: "="
+    -- the binary operators:
+    --  + * - < ==
+    BINARY_OP: "\+|\*|-|<|=="
+    INTLIT: "[0-9]+"
+    ID: "(_[a-zA-Z_0-9$]+)|([a-zA-Z][a-zA-Z_0-9$]*)"
+}
+
+-- grammar rules
+
+Program -> BEGIN VarDecl* Stm* END
+
+VarDecl -> Type ID SEMIC
+
+Type -> INT_TYPE
+
+Stm -> PRINTLN LBR Exp RBR SEMIC
+Stm -> ID ASSIGN Exp SEMIC
+Stm -> LCBR Stm* RCBR
+Stm -> WHILE LBR Exp RBR Stm
+Stm -> IF LBR Exp RBR Stm ELSE Stm
+
+Exp -> SimpleExp OperatorClause
+
+SimpleExp -> INTLIT
+SimpleExp -> ID
+SimpleExp -> LBR Exp RBR
+
+OperatorClause -> BINARY_OP SimpleExp
+OperatorClause ->

@@ -1,0 +1,8 @@
+//9
+//
+begin
+   int y;
+
+   y = 0 - 4;
+   println(3 * (y + 7));
+end

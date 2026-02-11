@@ -1,0 +1,8 @@
+//7
+//
+begin
+   int size;
+
+   size = 3 * 2;
+   println(1 + size);
+end

@@ -1,0 +1,4 @@
+begin
+	println(21 + (3 * 7));
+	println(11 * 9);
+end
